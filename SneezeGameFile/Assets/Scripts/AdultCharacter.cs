@@ -8,24 +8,42 @@ public class AdultCharacter : MonoBehaviour
     private Rigidbody2D myRigidbody;
 
     //Speed for Adult
-    public float speed = 1f;
+    public float moveSpeed;
 
+    //Checks if the adult is walking
     public bool isWalking;
 
+    //The amount of time the adult is walking
     public float walkTime;
 
-    public float waitTime; 
+    private float walkCounter;
+
+    private float waitCounter; 
+
+    //The amount of time the adult is not walking
+    public float waitTime;
+
+    private int WalkDirection;
 
 
     // Start is called before the first frame update
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
+
+        waitCounter = waitTime;
+        walkCounter = walkTime;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void ChooseDirection() 
+    { 
+        WalkDirection = Random.Range (0, 4)
+    
     }
 }
