@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c31f904ea509f9545a8cb43f2a5aaa20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  isWalking: 0
-  walkTime: 0
-  waitTime: 0
+  moveSpeed: 3.55
+  isWalking: 1
+  walkTime: 2.25
+  waitTime: 2.9
