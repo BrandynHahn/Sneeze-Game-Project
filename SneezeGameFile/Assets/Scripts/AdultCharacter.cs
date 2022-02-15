@@ -8,7 +8,13 @@ public class AdultCharacter : MonoBehaviour
     private Rigidbody2D myRigidbody;
 
     //Speed for Adult
-    public float moveSpeed;
+    public float speed = 1f;
+
+    //Chance adult will change directions
+    public float chanceDirections = 0.01f; 
+
+    //Edge of map
+    public float edge = 10f; 
 
     //Checks if the adult is walking
     public bool isWalking;
@@ -40,6 +46,33 @@ public class AdultCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 pos = transform.position;
+        pos.x = pos.x + speed * Time.deltaTime;
+        pos.y = pos.y + speed * Time.deltaTime;
+        transform.position = pos; 
+
+        if (pos.x < -edge)
+        {
+            speed = Mathf.Abs(speed);
+        }
+        else if (pos.x > edge)
+        {
+            speed = -Mathf.Abs(speed);
+        }
+        else if (pos.y < -edge)
+        {
+            speed = Mathf.Abs(speed);
+        }
+        else if (pos.y > edge)
+        {
+            speed = -Mathf.Abs(speed);
+        }
+        else if (Random.value < chanceDirections)
+        {
+            speed = -1 * speed; 
+        }
+
+
         if (isWalking)
         {
             walkCounter -= Time.deltaTime;
@@ -47,19 +80,19 @@ public class AdultCharacter : MonoBehaviour
             switch (WalkDirection) 
             {
                 case 0:
-                    myRigidbody.velocity = new Vector2(0, moveSpeed);
+                    myRigidbody.velocity = new Vector2(0, speed);
                     break;
 
                 case 1:
-                    myRigidbody.velocity = new Vector2(moveSpeed, 0);
+                    myRigidbody.velocity = new Vector2(speed, 0);
                     break;
 
                 case 2:
-                    myRigidbody.velocity = new Vector2(0, -moveSpeed);
+                    myRigidbody.velocity = new Vector2(0, -speed);
                     break;
 
                 case 3:
-                    myRigidbody.velocity = new Vector2(-moveSpeed, 0);
+                    myRigidbody.velocity = new Vector2(-speed, 0);
                     break; 
             
             }
