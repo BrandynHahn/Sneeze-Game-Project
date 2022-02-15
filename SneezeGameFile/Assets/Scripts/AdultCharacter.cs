@@ -42,8 +42,10 @@ public class AdultCharacter : MonoBehaviour
     }
 
     public void ChooseDirection() 
-    { 
-        WalkDirection = Random.Range (0, 4)
+    {
+        WalkDirection = Random.Range(0, 4);
+        isWalking = true;
+        walkCounter = walkTime;
     
     }
 }
