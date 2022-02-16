@@ -97,12 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c31f904ea509f9545a8cb43f2a5aaa20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   chanceDirections: 0.01
   edge: 10
   isWalking: 0
   walkTime: 4
-  waitTime: 3
+  waitTime: 10
 --- !u!50 &5301529335695648563
 Rigidbody2D:
   serializedVersion: 4

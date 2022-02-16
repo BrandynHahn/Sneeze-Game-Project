@@ -102,7 +102,7 @@ MonoBehaviour:
   edge: 10
   isWalking: 0
   walkTime: 10
-  waitTime: 1
+  waitTime: 10
 --- !u!50 &8809334377564797042
 Rigidbody2D:
   serializedVersion: 4

@@ -317,9 +317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98e1f949dd24394795ef308601052aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberToSpawn: 0
+  numberToSpawn: 7
   spawnPool: []
-  screenbounds: {fileID: 0}
+  screenbounds: {fileID: 407395667}
   AdultPrefab: {fileID: 8809334377564797037, guid: c79e9139855a9724cb79286aa48b68f9, type: 3}
   ChildPrefab: {fileID: 5301529335695648559, guid: 428579b9af2dded43940a23dddc47a58, type: 3}
   OldPrefab: {fileID: 607508660833421952, guid: 1d9e2be82ae318344aa629f9db0588e6, type: 3}
